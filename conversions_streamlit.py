@@ -4,8 +4,8 @@ from conversions_functions import *
 import json
 
 # Import data
-file = r'C:\Users\HP\Desktop\SH - Profesional\Data Science and Machine Learning\Proyectos\My projects\Conversions tool\Conversions dataset.xlsx'
-dataset = pd.read_excel(file, index_col = 0)
+path = 'https://raw.githubusercontent.com/francocibils/mkt_tool/main/Conversions%20dataset.csv'
+dataset = pd.read_csv(path, index_col = 0)
 
 params_dict = json.load(open(r'C:\Users\HP\Desktop\SH - Profesional\Data Science and Machine Learning\Proyectos\My projects\Conversions tool\params_dict.json'))
 products = [f'Product{i}' for i in range(1, 7)]
