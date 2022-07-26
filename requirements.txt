@@ -4,4 +4,3 @@ numpy
 seaborn
 statsmodels
 streamlit
-conversions_functions
