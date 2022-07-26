@@ -2,12 +2,14 @@ import pandas as pd
 import streamlit as st
 from conversions_functions import *
 import json
+import requests
 
 # Import data
 path = 'https://raw.githubusercontent.com/francocibils/mkt_tool/main/Conversions%20dataset.csv'
 dataset = pd.read_csv(path, index_col = 0)
 
-params_dict = json.load(open(r'C:\Users\HP\Desktop\SH - Profesional\Data Science and Machine Learning\Proyectos\My projects\Conversions tool\params_dict.json'))
+path = 'https://raw.githubusercontent.com/francocibils/mkt_tool/main/params_dict.json'
+params_dict = requests.get(path).json()
 products = [f'Product{i}' for i in range(1, 7)]
 platforms = [f'Platform{i}' for i in range(1, 4)]
 
