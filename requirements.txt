@@ -3,6 +3,5 @@ matplotlib
 numpy
 seaborn
 statsmodels
-json
 streamlit
 conversions_functions
