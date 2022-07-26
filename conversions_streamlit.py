@@ -1,4 +1,3 @@
-from cv2 import threshold
 import pandas as pd
 import streamlit as st
 from conversions_functions import *
